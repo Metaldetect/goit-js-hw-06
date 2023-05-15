@@ -17,7 +17,11 @@ const imagesList = document.querySelector(".gallery");
 
 const markup = images.reduce(
   (markup, image) =>
-    markup + `<li><img src="${image.url}" alt="${image.alt}"></li>`,
+    markup +
+    `<li><img src="${image.url}" alt="${image.alt}" width='300' height='200'></li>`,
   ""
 );
 imagesList.insertAdjacentHTML("beforeend", markup);
+imagesList.style.display = "flex";
+imagesList.style.flexWrap = "wrap";
+imagesList.style.gap = "20px";
